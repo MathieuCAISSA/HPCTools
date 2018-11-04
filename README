@@ -1,0 +1,10 @@
+lu.cpp : 
+
+icc -ipo -Ofast -o lu lu.cpp
+time ./lu 1000
+
+
+lupara.cpp :
+
+icc -xcore-avx2 -fopenmp -ipo -Ofast -o lupara lupara.cpp
+./lupara 1000
